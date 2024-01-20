@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: Books
+  description: Books information api
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /books:
+    'get':
+      tags:
+        - books
+      description: Get books
+      responses:
+        200:
+          description: Successfully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Books'
+
+components:
+  schemas:
+    Books:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Id book
+          example: 1
+        title:
+          type: string
+          description: title book
+          example: Design patterns
+        ISN:
+          type: string
+          description: ISN identified book
+          example: A1234568
+        author:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Author name
+              surname:
+                type: string
+                description: Surnames
+          example:
+            - name: Juan
+              surname: Palomo
+            - name: Pedro
+              surname: Jimenez
+
+
+
+
+
