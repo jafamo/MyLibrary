@@ -176,7 +176,6 @@ fabric.properties
 
 # PHPUnit
 /app/phpunit.xml
-/phpunit.xml
 
 # Build data
 /build/
@@ -195,3 +194,9 @@ fabric.properties
 /web/js/
 
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm,linux,symfony
+###> symfony/phpunit-bridge ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
